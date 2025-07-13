@@ -1,0 +1,137 @@
+/* src/components/TaskCard.css (UPDATED) */
+.task-card {
+    background-color: #333; /* Darker background for task cards */
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: grab; /* Indicate draggable */
+    transition: background-color 0.2s ease;
+  }
+  
+  .task-card:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .task-card:active {
+    cursor: grabbing;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  
+  .task-title {
+    font-size: 1em;
+    color: #eee;
+    margin: 0;
+    flex-grow: 1; /* Allow title to take up available space */
+  }
+  
+  .task-description {
+    font-size: 0.85em;
+    color: #bbb;
+    margin-bottom: 10px;
+    white-space: pre-wrap; /* Preserve whitespace for description */
+    word-break: break-word; /* Break long words */
+  }
+  
+  .task-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75em;
+    color: #888;
+    border-top: 1px solid #444;
+    padding-top: 8px;
+    margin-top: 8px;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8em;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .task-actions .btn-edit {
+    color: #a7e170; /* Greenish for edit */
+  }
+  
+  .task-actions .btn-edit:hover {
+    background-color: #555;
+    color: #c0ff8e;
+  }
+  
+  .task-actions .btn-delete {
+    color: #ff6b6b; /* Reddish for delete */
+    font-weight: bold;
+  }
+  
+  .task-actions .btn-delete:hover {
+    background-color: #555;
+    color: #ffaaaa;
+  }
+  
+  /* Styles for the task editing form */
+  .task-card .task-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .task-card .task-edit-form input,
+  .task-card .task-edit-form textarea,
+  .task-card .task-edit-form select {
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #282c34;
+    color: #eee;
+    font-size: 0.9em;
+  }
+  
+  .task-card .task-edit-form .form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 5px;
+  }
+  
+  .task-card .task-edit-form .form-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .task-card .task-edit-form .btn-save {
+    background-color: #64b5f6;
+    color: white;
+  }
+  
+  .task-card .task-edit-form .btn-save:hover {
+    background-color: #535bf2;
+  }
+  
+  .task-card .task-edit-form .btn-cancel {
+    background-color: #555;
+    color: white;
+  }
+  
+  .task-card .task-edit-form .btn-cancel:hover {
+    background-color: #666;
+  }

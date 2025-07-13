@@ -1,0 +1,146 @@
+/* src/components/ListCard.css */
+.list-card {
+    background-color: #282c34; /* Darker than body, lighter than task cards */
+    border-radius: 8px;
+    padding: 15px;
+    width: 270px; /* Fixed width for lists */
+    flex-shrink: 0; /* Prevent shrinking in flex container */
+    margin-right: 15px; /* Space between lists */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 150px); /* Limit height and allow scrolling */
+  }
+  
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .list-card h3 {
+    color: #eee;
+    font-size: 1.2em;
+    margin: 0;
+    cursor: pointer; /* Indicate clickable for editing */
+    flex-grow: 1;
+  }
+  
+  .list-name-input {
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-size: 1.2em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .btn-delete-list {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease;
+  }
+  
+  .btn-delete-list:hover {
+    color: #ffaaaa;
+  }
+  
+  .tasks-container {
+    flex-grow: 1; /* Allow task container to take available space */
+    overflow-y: auto; /* Enable vertical scrolling for tasks */
+    padding-right: 5px; /* Space for scrollbar */
+  }
+  
+  /* Scrollbar styles for tasks-container */
+  .tasks-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .tasks-container::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+  }
+  
+  .tasks-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+  }
+  
+  .tasks-container::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+  
+  
+  .add-task-btn {
+    background-color: #333;
+    color: #a7e170;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+  }
+  
+  .add-task-btn:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .add-task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .add-task-form input,
+  .add-task-form textarea,
+  .add-task-form select {
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #1e1e1e; /* Darker input background */
+    color: #eee;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .add-task-form button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-add-task {
+    background-color: #64b5f6; /* Blue add button */
+    color: white;
+  }
+  
+  .btn-add-task:hover {
+    background-color: #535bf2;
+  }
+  
+  .btn-cancel-task {
+    background-color: #555; /* Grey cancel button */
+    color: white;
+  }
+  
+  .btn-cancel-task:hover {
+    background-color: #666;
+  }

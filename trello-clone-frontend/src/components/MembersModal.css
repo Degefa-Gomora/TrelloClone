@@ -1,0 +1,191 @@
+/* src/components/MembersModal.css (NEW FILE) */
+.members-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Above everything else */
+  }
+  
+  .members-modal {
+    background-color: #282c34;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #3a3a3a;
+    background-color: #1e1e1e; /* Slightly darker header */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #a7e170;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 1.8em;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 5px;
+    transition: color 0.2s ease;
+  }
+  
+  .close-button:hover {
+    color: #fff;
+  }
+  
+  .modal-content {
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #64b5f6; /* Blue heading */
+  }
+  
+  .current-members-list,
+  .search-results ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .current-members-list li,
+  .search-results li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    gap: 10px; /* Space between text and buttons */
+  }
+  
+  .current-members-list li span,
+  .search-results li span {
+    flex-grow: 1; /* Allow text to take up space */
+  }
+  
+  .owner-tag {
+    background-color: #ffc107;
+    color: #333;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .add-members-heading {
+    border-top: 1px solid #3a3a3a;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  
+  .search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .search-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #eee;
+    font-size: 1em;
+  }
+  
+  .search-button {
+    background-color: #a7e170;
+    color: #282c34;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #8cc45c;
+  }
+  
+  .search-results {
+    margin-top: 15px;
+    max-height: 200px; /* Limit height for scrollable results */
+    overflow-y: auto;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #1e1e1e;
+  }
+  
+  .search-results h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 1em;
+  }
+  
+  .add-member-btn,
+  .remove-member-btn {
+    background-color: #64b5f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-member-btn:hover {
+    background-color: #535bf2;
+  }
+  
+  .remove-member-btn {
+    background-color: #ff6b6b;
+  }
+  
+  .remove-member-btn:hover {
+    background-color: #ff4d4d;
+  }
+  
+  .search-error, .no-results-message {
+    color: #ff6b6b;
+    font-size: 0.85em;
+    margin-top: 10px;
+    text-align: center;
+  }
